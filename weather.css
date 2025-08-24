@@ -1,0 +1,139 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  background: url("image.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Weather Card */
+.weather-app {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 420px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 70%;
+  outline: none;
+  font-size: 15px;
+}
+
+button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: #e67e22;
+  transform: scale(1.1);
+}
+
+/* Current Weather */
+.weather-info {
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.weather-info h2 {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.weather-icon {
+  font-size: 55px;
+  margin: 15px 0;
+}
+
+/* Weekly Forecast */
+.forecast-title {
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+}
+
+.forecast-day h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.forecast-day p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.sunny { background: linear-gradient(135deg, #f9d423, #ff4e50); }
+.cloudy { 
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #ff00cc, #333399);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+ }
+.rainy { background: linear-gradient(135deg, #00c6fb, #005bea); }
+.snowy { background: linear-gradient(135deg, #83a4d4, #b6fbff); }
+.stormy { background: linear-gradient(135deg, #232526, #414345); }
+

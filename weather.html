@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="weather-app">
+      <h1 class="title">🌤 Weather App</h1>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeatherByCity()">🔍</button>
+        <button onclick="getWeatherByLocation()">📍</button>
+      </div>
+
+      <!-- Current Weather -->
+      <div class="weather-info" id="weatherInfo"></div>
+
+      <!-- Weekly Forecast -->
+      <h2 class="forecast-title">📅 Weekly Forecast</h2>
+      <div class="forecast" id="forecast"></div>
+    </div>
+  </div>
+  <script src="weather.js"></script>
+</body>
+</html>
+
+
